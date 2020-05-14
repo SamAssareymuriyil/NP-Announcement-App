@@ -1,0 +1,82 @@
+<!--Name: Sam Assareymuriyil
+Grade: 11 (ICS3UO-C)
+Date: March 5th 2020
+Version 1.0.0-->
+<!--tells the web browser that this specific document was written in HTML-->
+<!DOCTYPE html>
+<!--starts the HTML content of the document-->
+<html>
+    <!--creates a container for the metadata (data that is not displayed, but defines key aspects of the document)-->
+    <head>
+    <!--selects the source for the JavaScript used in the page-->
+    <script src="AppTeacher.js"></script>
+    <!--sets the favicon for the page from an image I have uploaded to a image hosting platform-->
+    <link rel="icon" type="png" href="https://i.ibb.co/hmDWDr6/nplogo.png">
+    <!--sets the name of the page that is displayed in the tab of the web browser-->    
+    <title>Announcement Creator</title>
+    <!--sets the stylesheet for the page in which the design is set--> 
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <!--a specific font set for the stylesheet to access--> 
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    </head>
+    <body>
+		<!--creates a header which allows for a box to be made to contain the attributed objects-->
+		<div id="header">
+			<!--grabs an uploaded image, which if clicked on would reload this page, also sets the location, padding, and size for the image taken from an image hosting site-->
+			<a href="./AppLogin.html"><img style="padding: 15 15px; float: left;" src="https://i.ibb.co/hmDWDr6/nplogo.png" alt="North Park Logo"height=150px width=150px></a>
+			<!--sets a title for the page-->
+			<h1>North Park Secondary School</h1>
+			<!--sets a subtitle for the page-->
+						<h2>Announcement Creator</h2>
+						<div id="logout"><a href="./AppLogin.html"><h3>Logout</h3></a></div>
+		</div>
+			<form id="annInfo">
+			<!--creates a dropdown list named "Grade" saved as "HTMLgradeT" and sets its options and the values attributed to them-->
+				<select id="HTMLgradeT" name="Grade">
+					<option value="all" selected>Grade</option>
+					<option value="nine">9</option>
+					<option value="ten">10</option>
+					<option value="eleven">11</option>
+					<option value="tweleve">12</option>
+					<option value="all">All</option>    
+				</select>
+			<!--creates a dropdown list named "Gender" saved as "HTMLgenT" and sets its options and the values attributed to them-->
+				<select id="HTMLgenT" name="Gender">
+					<option value="A" selected>Gender</option>
+					<option value="M">Male</option>
+					<option value="F">Female</option>
+					<option value="NB">Non-binary</option>
+					<option value="A">All</option>        
+				</select>
+			<!--creates a dropdown list named "Club" saved as "HTMLclubT" and sets its options and the values attributed to them-->
+				<select id="HTMLclubT" name="Club">
+					<option value ="clubs" selected>Club/Team</option>
+					<option value="CC">Computer Club</option>
+					<option value="DECA">DECA</option>
+					<option value="Badminton">Badminton</option>
+					<option value="UN">Model UN</option>
+					<option value="clubs">All</option>         
+				</select>
+			<!--creates a dropdown list named "IBT" saved as "HTMLibtT" and sets its options and the values attributed to them-->
+				<select id="HTMLibtT" name="IBT">
+					<option value="B" selected>IBT?</option>
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+					<option value="B">All</option> 
+				</select><br><br>
+			<center><div id="info">
+				<!--creates textareas named "Title", "TeacherN", and "Announcement" saved as "HTMLtitleT", "HTMLteacherT", and "HTMLpostT" and sets the user input value attributed to them-->
+				<textarea id="HTMLtitleT" name="Title" cols="41" rows="1" placeholder="Type announcement title here"></textarea><br>
+				<textarea id="HTMLteacherT" name="TeacherN" cols="41" rows="1" placeholder="Type your name here"></textarea><br>                     
+				<textarea id="HTMLpostT" name="Announcement" cols="41" rows="10" placeholder="Type announcement here"></textarea><br>
+				<!--creates a post button that activates the fucntion storeANN and centers the button-->
+				<input type="submit" value="Post" class="stud" onclick="storeANN()">
+			</div></center>
+		</form>
+		<!--creates a footer to hold objects-->
+		<div id="footer">
+			<!--create scrolling text that scrolls from right to left, set its font, and reference the links that it must reference to when clicked-->
+			<p><marquee behaviour="scroll"direction="left"><a href="https://twitter.com/NorthParkSSca">@NorthParkSSca on Twitter</a>   |   Follow us on our Social Media for more updates   |   <a href="https://www.instagram.com/northparkss">@northparkss on Instagram</a></marquee></p>
+		</div>
+    </body>
+</html>

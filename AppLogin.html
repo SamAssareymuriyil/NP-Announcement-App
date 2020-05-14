@@ -1,0 +1,52 @@
+<!--Name: Sam Assareymuriyil
+Grade: 11 (ICS3UO-C)
+Date: March 5th 2020
+Version 1.0.0-->
+<!--tells the web browser that this specific document was written in HTML-->
+<!DOCTYPE html>
+<!--starts the HTML content of the document-->
+<html>
+    <!--creates a container for the metadata (data that is not displayed, but defines key aspects of the document)-->
+    <head>
+      <!--selects the source for the JavaScript used in the page-->
+      <script src="AppLogin.js"></script>
+      <!--sets the favicon for the page from an image I have uploaded to a image hosting platform-->
+      <link rel="icon" type="png" href="https://i.ibb.co/hmDWDr6/nplogo.png">
+      <!--sets the name of the page that is displayed in the tab of the web browser-->    
+      <title>Application Login</title>
+      <!--sets the stylesheet for the page in which the design is set--> 
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!--a specific font set for the stylesheet to access--> 
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    </head>
+    <body>
+      <!--creates a header which allows for a box to be made to contain the attributed objects-->
+      <div id="header">
+          <!--grabs an uploaded image, which if clicked on would reload this page, also sets the location, padding, and size for the image taken from an image hosting site-->
+          <a href="./AppLogin.html"><p><img style="padding: 15 15px; float: left;" src="https://i.ibb.co/hmDWDr6/nplogo.png" alt="North Park Logo"height=89px width=89px></a>
+          <!--sets a title for the page-->
+          <h1>North Park Secondary School</h1>
+          <!--sets a subtitle for the page-->
+          <h2>Login</h2>
+      </div>
+      <!--creates a box to contain the form--> 
+      <div id="form">
+        <!--creates and centers a form saved as "login"--> 
+        <form id="login">
+            <!--creates a textbox to insert the username to check login-->
+            <br><input type="text" id="usr"placeholder="Username" /><br><br>
+            <!--creates a password box in which text typed cannot be seen to insert the password to check in login-->
+            <input type="password" id="pwd"placeholder="Password" /><br><br>
+            <!--create a teacher submit button which when clicked activates the function StorinatorTeach-->
+            <div id="buttons"><input type="submit" class="teach" value="Teacher" onclick="StorinatorTeach()">
+            <!--create a student submit button which when clicked activated the fucntion StorinatorStudent-->
+            <input type="submit" class="stud" value="Student" onclick="StorinatorStudent()"><br></div>
+        </form>
+      </div>
+      <!--creates a footer to hold objects-->
+      <div id="footer">
+        <!--create scrolling text that scrolls from right to left, set its font, and reference the links that it must reference to when clicked-->
+        <p><marquee behaviour="scroll"direction="left"><a href="https://twitter.com/NorthParkSSca">@NorthParkSSca on Twitter</a>   |   Follow us on our Social Media for more updates   |   <a href="https://www.instagram.com/northparkss">@northparkss on Instagram</a></marquee></p>
+      </div>
+    </body>
+</html>

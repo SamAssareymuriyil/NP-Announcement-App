@@ -1,0 +1,93 @@
+body{
+  background-color:#183689;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1{
+  font-weight: 1000;
+  color: aliceblue;
+}
+
+h2, h3, h4, h5, h6, p {
+  font-weight: 500;
+  color: aliceblue;
+}
+
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+#header{
+  width: 100%;
+  background-color:#fa6302;
+  text-align: left;
+}
+
+#logout{
+  text-align: right;
+  padding-right: 30px;
+  padding-bottom: 1px;
+}
+
+#form{
+  background-color: aliceblue;
+  text-align: center;
+  width: 275px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+input[type="text"], input[type="password"]{
+  font-size:18px;
+  font-family: 'Quicksand', sans-serif;
+  padding: 2px;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(137, 142, 146);
+}
+
+input[type="submit"]{
+  font-size:12px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.teach{
+  background-color:#183689;
+  color: aliceblue;
+  align-content: left;
+}
+
+.stud{
+  background-color:#fa6302;
+  color: aliceblue;
+  text-align: right;
+}
+
+#buttons{
+  background-color:rgb(137, 142, 146);
+}
+
+#footer{
+  background-color:#fa6302;
+}
+
+#info{
+  text-align: center;
+  align-content: center;
+  padding: 3px;
+  background-color: rgb(137, 142, 146);
+  width: fit-content;
+}
+
+#announcement{
+  background-color: rgb(137, 142, 146);
+  width: fit-content;
+  color: aliceblue;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
