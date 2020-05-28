@@ -19,7 +19,7 @@ Version 1.0.0-->
     <!--a specific font set for the stylesheet to access--> 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
     </head>
-    <body>
+    <body <!--onload="teacherStart()"-->> 
 		<!--creates a header which allows for a box to be made to contain the attributed objects-->
 		<div id="header">
 			<!--grabs an uploaded image, which if clicked on would reload this page, also sets the location, padding, and size for the image taken from an image hosting site-->
@@ -70,7 +70,7 @@ Version 1.0.0-->
 				<textarea id="HTMLteacherT" name="TeacherN" cols="41" rows="1" placeholder="Type your name here"></textarea><br>                     
 				<textarea id="HTMLpostT" name="Announcement" cols="41" rows="10" placeholder="Type announcement here"></textarea><br>
 				<!--creates a post button that activates the fucntion storeANN and centers the button-->
-				<input type="submit" value="Post" class="stud" onclick="storeANN()">
+				<input type="submit" value="Post" class="stud" onclick="store()">
 			</div></center>
 		</form>
 		<!--creates a footer to hold objects-->

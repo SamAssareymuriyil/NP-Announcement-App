@@ -5,26 +5,34 @@ function logout(){
 }
 
 function showANN(){
-    var gradeT = localStorage.getItem('gradeANN')
-    var genT = localStorage.getItem('genANN')
-    var clubT = localStorage.getItem('clubANN')
-    var ibtT = localStorage.getItem('ibtANN')
+    var teachTime=[];
+    var annDiv=[];
+    var titleA=[];
+    var teacherA=[];
+    var annCon=[];
+    var gradeT = JSON.parse(localStorage.getItem('gradeANN'))
+    var genT = JSON.parse(localStorage.getItem('genANN'))
+    var clubT = JSON.parse(localStorage.getItem('clubANN'))
+    var ibtT = JSON.parse(localStorage.getItem('ibtANN'))
     var gradeS = localStorage.getItem('gradeCHK')
     var genS = localStorage.getItem('genCHK')
     var clubS = localStorage.getItem('clubCHK')
     var ibtS = localStorage.getItem('ibtCHK')
-    var title = localStorage.getItem('titleANN');
-    var teacher = (localStorage.getItem('teacherANN'))+' at '+(localStorage.getItem('timeANN'));
-    var annoucement = localStorage.getItem('postANN');
+    var title = JSON.parse(localStorage.getItem('titleANN'));
+    var teacher = JSON.parse(localStorage.getItem('teacherANN'));
+    var time = JSON.parse(localStorage.getItem('timeANN'));
+    var annoucement = JSON.parse(localStorage.getItem('postANN'));
+    var textHolder = "";
+    //creates a for loop that runs until all of the array's values has been checked for
+    for (var i=0; i<gradeT.length; i++){
     //compares the "variableCHK"'s and "variableANN"'s from local storage
-    if( gradeS === gradeT || gradeT == "all" && genS === genT || genT == "A" && clubS === clubT || clubT == "clubs" && ibtS === ibtT || ibtT == "B"){
-        //the following lines take the values of the Annoucement's title, teacher name, and itself and uses inner html to input the text into the previously invisible textboxes
-        document.getElementById("titleANN1").innerHTML = title;
-        document.getElementById("teacherANN1").innerHTML = teacher;
-        document.getElementById("postANN1").innerHTML = annoucement;  
+        if((gradeS === gradeT[i] || gradeT[i] == "all") && (genS === genT[i] || genT[i] == "A") && (clubS === clubT[i] || clubT[i] == "clubs") && (ibtS === ibtT[i] || ibtT[i] == "B")){
+            textHolder += '<h2>' + title[i] + '<br>' + '<h6>' + teacher[i] + ' at ' + time[i] + '<br>' + '<h4>' + annoucement[i] + '<br>' + '<hr>' + '<br>'
+        }
     }
-    else {
+    if(textHolder == '') {
         //alerts the user that there are no announcements for them under the provided parameters
-        document.getElementById("titleANN1").innerHTML = 'You have no Announcements'
+        document.getElementById("annArea").innerHTML = ('You have no Announcements, for your current settings');
     }
+    document.getElementById("annArea").innerHTML += textHolder  
 }

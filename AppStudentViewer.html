@@ -19,7 +19,7 @@ Version 1.0.0-->
         <!--a specific font set for the stylesheet to access--> 
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
     </head>
-    <body onload="showANN()">
+    <body onload="showANN()"><center>
 		<!--creates a header which allows for a box to be made to contain the attributed objects-->
 		<div id="header">
 			<!--grabs an uploaded image, which if clicked on would reload this page, also sets the location, padding, and size for the image taken from an image hosting site-->
@@ -31,10 +31,8 @@ Version 1.0.0-->
 						<div id="logout"><a href="./index.html"><h3>Logout</h3></a></div>
 		</div>
         <!--creates invisible formated boxes for js to put the announcements into-->
-        <center><div id="announcement">
-            <u><b><h2 id="titleANN1"></h2></b></u>
-            <h6 id="teacherANN1"></h6>
-            <h4 id="postANN1"></h4>
+        <div id="announcement">
+            <p id="annArea"></p>
         </div></center>
         <!--creates a footer to hold objects-->
         <div id="footer">

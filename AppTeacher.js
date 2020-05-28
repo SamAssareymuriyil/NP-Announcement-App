@@ -3,15 +3,15 @@
 //Date: March 5th 2020
 
 //global declratation of the teacher variables for this js file
-var gradeT = []; 
+let i=0;
+var gradeT = [];
 var genT = [];
-var clubT = []; 
-var ibtT = []; 
-let i = 0;
-let titleT = [];
-let teacherT = []; 
-let postT = [];
-let timeT = [];
+var clubT = [];
+var ibtT = [];
+var titleT = [];
+var teacherT = [];
+var postT = [];
+var timeT = [];
 
 //creates a function called "logout" which closes the current window when used
 function logout(){
@@ -19,8 +19,21 @@ function logout(){
     window.close();
 }
 
+function store(){
+    if (localStorage.getItem('gradeANN') === null){
+        storeANN1();
+        i++
+    }
+    else {
+        storeANN2();
+        i++
+    }
+    //increments i setting up for the next announcement
+}
+
 //creates a function called "storeANN" in which the teacher's input is stored as variables, the values of which are stored into Local Storage
-function storeANN(){
+function storeANN1(){
+    //first announcement
     //the following variables that end in T stores the value of the dropdown menu's user input from the HTML document
     gradeT[i] = document.getElementById("HTMLgradeT").value;
     genT[i] = document.getElementById("HTMLgenT").value;
@@ -30,8 +43,8 @@ function storeANN(){
     teacherT[i] = document.getElementById("HTMLteacherT").value;
     postT[i] = document.getElementById("HTMLpostT").value;
     timeT[i] = getTime();
-    //displays alert to show that announcment was posted in which the title of the post and the teacher's name are referenced
-    alert('Your announcement titled "' + titleT[i] + '" was posted ' + teacherT[i] + '.');
+    //displays alert to show that announcment was posted
+    alert('Your announcement was posted.');
     //the following lines save the previously saved variables to its appropriate "variableANN" key for easy reference
     localStorage.setItem('gradeANN',JSON.stringify(gradeT));
     localStorage.setItem('genANN',JSON.stringify(genT));
@@ -41,7 +54,39 @@ function storeANN(){
     localStorage.setItem('teacherANN',JSON.stringify(teacherT));
     localStorage.setItem('postANN',JSON.stringify(postT));
     localStorage.setItem('timeANN',JSON.stringify(timeT));
-    i++
+    checkArray();
+}
+
+function storeANN2(){
+    //for any announcements after the first
+    let gradeT = JSON.parse(localStorage.getItem('gradeANN'))
+    let genT = JSON.parse(localStorage.getItem('genANN'))
+    let clubT = JSON.parse(localStorage.getItem('clubANN'))
+    let ibtT = JSON.parse(localStorage.getItem('ibtANN'))
+    let titleT = JSON.parse(localStorage.getItem('titleANN'))
+    let teacherT = JSON.parse(localStorage.getItem('teacherANN'))
+    let postT = JSON.parse(localStorage.getItem('postANN'))
+    let timeT = JSON.parse(localStorage.getItem('timeANN'))
+    //stores the value of the dropdown menu's user input from the HTML document into the variable array
+    gradeT.push(document.getElementById("HTMLgradeT").value);
+    genT.push(document.getElementById("HTMLgenT").value);
+    clubT.push(document.getElementById("HTMLclubT").value);
+    ibtT.push(document.getElementById("HTMLibtT").value);
+    titleT.push(document.getElementById("HTMLtitleT").value);
+    teacherT.push(document.getElementById("HTMLteacherT").value);
+    postT.push(document.getElementById("HTMLpostT").value);
+    timeT.push(getTime());
+    //displays alert to show that announcment was posted
+    alert('Your announcement was posted.');
+    //store variable array back into local storage
+    localStorage.setItem('gradeANN',JSON.stringify(gradeT));
+    localStorage.setItem('genANN',JSON.stringify(genT));
+    localStorage.setItem('clubANN',JSON.stringify(clubT));
+    localStorage.setItem('ibtANN',JSON.stringify(ibtT));
+    localStorage.setItem('titleANN',JSON.stringify(titleT));
+    localStorage.setItem('teacherANN',JSON.stringify(teacherT));
+    localStorage.setItem('postANN',JSON.stringify(postT));
+    localStorage.setItem('timeANN',JSON.stringify(timeT));
     checkArray();
 }
 
