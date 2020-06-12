@@ -1,9 +1,10 @@
 //Name: Sam Assareymuriyil
 //Grade: 11 (ICS3UO-C)
-//Date: March 5th 2020
+//Date: June 10th 2020
 
 //global declratation of the teacher variables for this js file
 let i=0;
+let j=1;
 var gradeT = [];
 var genT = [];
 var clubT = [];
@@ -12,6 +13,7 @@ var titleT = [];
 var teacherT = [];
 var postT = [];
 var timeT = [];
+let announcementView = "<table><tr><th>Time Posted</th><th>Grade</th><th>Gender</th><th>Club</th><th>IBT?</th><th>Title</th><th>Teacher</th><th>Announcement</th></tr>";
 
 //creates a function called "logout" which closes the current window when used
 function logout(){
@@ -54,7 +56,7 @@ function storeANN1(){
     localStorage.setItem('teacherANN',JSON.stringify(teacherT));
     localStorage.setItem('postANN',JSON.stringify(postT));
     localStorage.setItem('timeANN',JSON.stringify(timeT));
-    checkArray();
+    //checkArray();
 }
 
 function storeANN2(){
@@ -87,7 +89,7 @@ function storeANN2(){
     localStorage.setItem('teacherANN',JSON.stringify(teacherT));
     localStorage.setItem('postANN',JSON.stringify(postT));
     localStorage.setItem('timeANN',JSON.stringify(timeT));
-    checkArray();
+    //checkArray();
 }
 
 function checkArray(){
@@ -131,4 +133,24 @@ function getTime(){
     else if (ufMonth == 10){month = 'November'}
     else if (ufMonth == 11){month = 'Decemeber'};
     return TIME + ' on ' + day + ' ' + date + ' ' + month + ', ' + year
+}
+
+function disp(){
+
+    var checkgradeT = JSON.parse(localStorage.getItem("gradeANN"));
+    var checkgenT = JSON.parse(localStorage.getItem("genANN"));
+    var checkclubT = JSON.parse(localStorage.getItem("clubANN"));
+    var checkibtT = JSON.parse(localStorage.getItem("ibtANN"));
+    var checktitleT = JSON.parse(localStorage.getItem("titleANN"));
+    var checkteacherT = JSON.parse(localStorage.getItem("teacherANN"));
+    var checkpostT = JSON.parse(localStorage.getItem("postANN"));
+    var checktimeT = JSON.parse(localStorage.getItem("timeANN"));
+
+    for(j=1; j < checkgradeT.length + 1; j++){
+        jLen = checkgradeT.length - j;
+        announcementView +=
+            "<tr><td>" + checktimeT[jLen] + "</td><td>" + checkgradeT[jLen] + "</td><td>" + checkgenT[jLen] + "</td><td>" +  checkclubT[jLen] + "</td><td>" + checkibtT[jLen] + "</td><td>" + checktitleT[jLen] + "</td><td>" + checkteacherT[jLen] + "</td><td>" + checkpostT[jLen] + "</td></tr>";
+    }
+    announcementView += "</table>";
+    document.getElementById("teachAnnView").innerHTML = announcementView;
 }

@@ -1,6 +1,6 @@
 <!--Name: Sam Assareymuriyil
 Grade: 11 (ICS3UO-C)
-Date: March 5th 2020
+Date: June 10th 2020
 Version 1.0.0-->
 <!--tells the web browser that this specific document was written in HTML-->
 <!DOCTYPE html>
@@ -19,50 +19,51 @@ Version 1.0.0-->
     <!--a specific font set for the stylesheet to access--> 
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
     </head>
-    <body <!--onload="teacherStart()"-->> 
+    <body onload="disp()"> 
 		<!--creates a header which allows for a box to be made to contain the attributed objects-->
 		<div id="header">
 			<!--grabs an uploaded image, which if clicked on would reload this page, also sets the location, padding, and size for the image taken from an image hosting site-->
-			<a href="./AppLogin.html"><img style="padding: 15 15px; float: left;" src="https://i.ibb.co/hmDWDr6/nplogo.png" alt="North Park Logo"height=150px width=150px></a>
+			<a href="./index.html"><img style="padding: 15 15px; float: left;" src="https://i.ibb.co/hmDWDr6/nplogo.png" alt="North Park Logo"height=150px width=150px></a>
 			<!--sets a title for the page-->
 			<h1>North Park Secondary School</h1>
 			<!--sets a subtitle for the page-->
 						<h2>Announcement Creator</h2>
 						<div id="logout"><a href="index.html"><h3>Logout</h3></a></div>
 		</div>
+		<br>
 			<form id="annInfo">
 			<!--creates a dropdown list named "Grade" saved as "HTMLgradeT" and sets its options and the values attributed to them-->
 				<select id="HTMLgradeT" name="Grade">
-					<option value="all" selected>Grade</option>
-					<option value="nine">9</option>
-					<option value="ten">10</option>
-					<option value="eleven">11</option>
-					<option value="tweleve">12</option>
-					<option value="all">All</option>    
+					<option value="All" selected>Grade</option>
+					<option value="Grade 9">9</option>
+					<option value="Grade 10">10</option>
+					<option value="Grade 11">11</option>
+					<option value="Grade 12">12</option>
+					<option value="All">All</option>    
 				</select>
 			<!--creates a dropdown list named "Gender" saved as "HTMLgenT" and sets its options and the values attributed to them-->
 				<select id="HTMLgenT" name="Gender">
-					<option value="A" selected>Gender</option>
-					<option value="M">Male</option>
-					<option value="F">Female</option>
-					<option value="NB">Non-binary</option>
-					<option value="A">All</option>        
+					<option value="All" selected>Gender</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Non-Binary">Non-binary</option>
+					<option value="All">All</option>        
 				</select>
 			<!--creates a dropdown list named "Club" saved as "HTMLclubT" and sets its options and the values attributed to them-->
 				<select id="HTMLclubT" name="Club">
-					<option value ="clubs" selected>Club/Team</option>
-					<option value="CC">Computer Club</option>
+					<option value ="All" selected>Club/Team</option>
+					<option value="Computer Club">Computer Club</option>
 					<option value="DECA">DECA</option>
 					<option value="Badminton">Badminton</option>
-					<option value="UN">Model UN</option>
-					<option value="clubs">All</option>         
+					<option value="Model UN">Model UN</option>
+					<option value="All">All</option>         
 				</select>
 			<!--creates a dropdown list named "IBT" saved as "HTMLibtT" and sets its options and the values attributed to them-->
 				<select id="HTMLibtT" name="IBT">
-					<option value="B" selected>IBT?</option>
-					<option value="Y">Yes</option>
-					<option value="N">No</option>
-					<option value="B">All</option> 
+					<option value="All" selected>IBT?</option>
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+					<option value="All">All</option> 
 				</select><br><br>
 			<center><div id="info">
 				<!--creates textareas named "Title", "TeacherN", and "Announcement" saved as "HTMLtitleT", "HTMLteacherT", and "HTMLpostT" and sets the user input value attributed to them-->
@@ -73,6 +74,12 @@ Version 1.0.0-->
 				<input type="submit" value="Post" class="stud" onclick="store()">
 			</div></center>
 		</form>
+		<div id="annPosted">
+			<h3>Posted Announcements</h3>
+			<center><p id="teachAnnView">
+			</p></center>
+		</div>
+		<br>
 		<!--creates a footer to hold objects-->
 		<div id="footer">
 			<!--create scrolling text that scrolls from right to left, set its font, and reference the links that it must reference to when clicked-->

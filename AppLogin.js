@@ -1,6 +1,6 @@
 //Name: Sam Assareymuriyil
 //Grade: 11 (ICS3UO-C)
-//Date: March 5th 2020
+//Date: June 10th 2020
 
 //creates the function StorinatorTeach by which the input username and password is checked and if correct access is granted
 function StorinatorTeach(){

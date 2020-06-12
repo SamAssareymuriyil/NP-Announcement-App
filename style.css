@@ -91,3 +91,18 @@ input[type="submit"]{
   padding-left: 10px;
   padding-right: 10px;
 }
+
+th, td {
+  border-bottom: 1px solid aliceblue;
+  color: aliceblue;
+  padding: 10px;
+}
+
+th {
+  background-color: #fa6302;
+  text-align: center;
+}
+
+td {
+  color: aliceblue;
+}

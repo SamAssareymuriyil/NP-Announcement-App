@@ -1,3 +1,7 @@
+//Name: Sam Assareymuriyil
+//Grade: 11 (ICS3UO-C)
+//Date: June 10th 2020
+
 //creates a function called "logout" which closes the current window when used
 function logout(){
     //uses the window close function to close the window when a user presses "Logout"
@@ -26,7 +30,7 @@ function showANN(){
     //creates a for loop that runs until all of the array's values has been checked for
     for (var i=0; i<gradeT.length; i++){
     //compares the "variableCHK"'s and "variableANN"'s from local storage
-        if((gradeS === gradeT[i] || gradeT[i] == "all") && (genS === genT[i] || genT[i] == "A") && (clubS === clubT[i] || clubT[i] == "clubs") && (ibtS === ibtT[i] || ibtT[i] == "B")){
+        if((gradeS === gradeT[i] || gradeT[i] == "All") && (genS === genT[i] || genT[i] == "All") && (clubS === clubT[i] || clubT[i] == "All") && (ibtS === ibtT[i] || ibtT[i] == "All")){
             textHolder += '<h2>' + title[i] + '<br>' + '<h6>' + teacher[i] + ' at ' + time[i] + '<br>' + '<h4>' + annoucement[i] + '<br>' + '<hr>' + '<br>'
         }
     }

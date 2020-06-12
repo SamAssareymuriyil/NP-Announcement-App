@@ -1,6 +1,6 @@
 //Name: Sam Assareymuriyil
 //Grade: 11 (ICS3UO-C)
-//Date: March 5th 2020
+//Date: June 10th 2020
 
 //global declratation of the teacher variables for this js file
 var gradeS;
